@@ -10,58 +10,71 @@
 let original = "안녕하세요";
 let clone = original;
 
-console.log(original);
-console.log(clone);
+console.log(original); // '안녕하세요'
+console.log(clone); // '안녕하세요'
+// 문제 1.
+console.log(original === clone); //
 
-clone += " 안유진 입니다.";
+clone += " 이우빈 입니다."; // '안녕하세요 이우빈 입니다.'
 console.log("==============");
-console.log(original);
-console.log(clone);
+console.log(original); // 안녕하세요
+console.log(clone); // 안녕하세요 이우빈 입니다.
+
+// 문제 2.
+console.log(original === clone); //
 
 // copy by reference
 let originalObj = {
-  name: "안유진",
-  group: "아이브",
+  name: "이우빈",
+  group: "우빈패밀리",
 };
 let cloneObj = originalObj;
+console.log("==============");
 
-console.log(originalObj);
-console.log(cloneObj);
+console.log(originalObj); // {name: '이우빈', group:'우빈패밀리'}
+console.log(cloneObj); // {name: '이우빈', group:'우빈패밀리'}
+// 문제 3.
+console.log(originalObj === cloneObj); //
 
 console.log("==============");
 
-originalObj["group"] = "코드팩토리";
-console.log(originalObj);
-console.log(cloneObj);
+originalObj["group"] = "동현스터디";
+console.log(originalObj); // {name: '안유진', group:'동현스터디'}
+console.log(cloneObj); // {name: '안유진', group:'동현스터디'}
 
-console.log(originalObj === cloneObj); // true
-console.log(original === clone); // false
+// 문제 4.
+console.log(originalObj === cloneObj); //
 
 originalObj = {
   name: "이우빈",
-  gruop: "금강펜테리움",
+  gruop: "동현스터디",
 };
 
 cloneObj = {
   name: "이우빈",
-  gruop: "금강펜테리움",
+  gruop: "동현스터디",
 };
-console.log(originalObj === cloneObj); // false
 
+// 문제 5.
+console.log(originalObj === cloneObj); //
+
+// 문제 6.
 const yuJin1 = {
-  name: "안유진",
-  group: "아이브",
+  name: "이우빈",
+  group: "동현스터디",
 };
 const yuJin2 = yuJin1;
 
 const yuJin3 = {
-  name: "안유진",
-  group: "아이브",
+  name: "이우빈",
+  group: "동현스터디",
 };
 
-console.log(yuJin1 === yuJin2); // true
-console.log(yuJin1 === yuJin3); // false
-console.log(yuJin2 === yuJin3); // false
+console.log(yuJin1 === yuJin2); //
+console.log(yuJin1 === yuJin3); //
+console.log(yuJin2 === yuJin3); //
+
+console.log("==============");
 
 /**
  * Spread Operator
